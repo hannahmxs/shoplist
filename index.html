@@ -21,41 +21,59 @@
     margin-bottom: 40px;
     font-size: 28px;
   }
-  a.link-button {
-    display: block;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
     width: 100%;
-    max-width: 420px;
+    max-width: 1000px;
+  }
+  a.card {
+    display: block;
     text-decoration: none;
-    text-align: center;
-    padding: 10px 16px;
-    margin-bottom: 12px;
-    border-radius: 10px;
     color: #333;
+    border-radius: 14px;
+    overflow: hidden;
     transition: 0.2s;
   }
-  a.link-button:hover {
-    filter: brightness(0.95);
-    transform: translateY(-1px);
+  a.card:hover {
+    transform: translateY(-3px);
   }
-  a.link-button .shop-name {
+  a.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+  }
+  a.card .card-content {
+    padding: 14px 16px 18px;
+  }
+  a.card .shop-name {
     display: block;
     font-weight: bold;
     font-size: 16px;
   }
-  a.link-button .shop-category {
+  a.card .shop-category {
     display: block;
     font-weight: 300;
     font-size: 13px;
     margin-top: 2px;
+    margin-bottom: 10px;
   }
-  .raw-rare   { background: #d7e3f4; }
+  a.card .cta {
+    font-size: 11px;
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
   .eyes-tries { background: #f6d6d6; }
+  .raw-rare   { background: #d7e3f4; }
   .nordlicht  { background: #d4ecdd; }
   .seven-seas { background: #fdeecb; }
   .looks-n-brains { background: #e6d9f2; }
+  .flower-box { background: #fbe0ef; }
   footer {
-    margin-top: auto;
-    padding-top: 60px;
+    margin-top: 60px;
     font-size: 12px;
     color: #666;
     font-weight: 300;
@@ -66,32 +84,65 @@
 
 <h1>Meine Shops</h1>
 
-<a class="link-button raw-rare" href="https://juniqe.com/p/raw-and-rare/cprvkxlm" target="_blank">
-  <span class="shop-name">Raw & Rare</span>
-  <span class="shop-category">s/w photography</span>
-</a>
+<div class="grid">
 
-<a class="link-button eyes-tries" href="https://juniqe.com/p/ytmwirhq" target="_blank">
-  <span class="shop-name">Eyes & Tries</span>
-  <span class="shop-category">photography</span>
-</a>
+  <a class="card eyes-tries" href="https://juniqe.com/p/ytmwirhq" target="_blank">
+    <img src="eyes_and_tries.jpg" alt="Eyes & Tries">
+    <div class="card-content">
+      <span class="shop-name">Eyes & Tries</span>
+      <span class="shop-category">photography</span>
+      <span class="cta">Zum Shop</span>
+    </div>
+  </a>
 
-<a class="link-button nordlicht" href="https://juniqe.com/p/dncillkz" target="_blank">
-  <span class="shop-name">Nordlicht Atelier</span>
-  <span class="shop-category">paintings</span>
-</a>
+  <a class="card raw-rare" href="https://juniqe.com/p/raw-and-rare/cprvkxlm" target="_blank">
+    <img src="raw_and_rare.jpg" alt="Raw & Rare">
+    <div class="card-content">
+      <span class="shop-name">Raw & Rare</span>
+      <span class="shop-category">s/w photography</span>
+      <span class="cta">Zum Shop</span>
+    </div>
+  </a>
 
-<a class="link-button seven-seas" href="https://juniqe.com/p/akjoocsf" target="_blank">
-  <span class="shop-name">7 Seas</span>
-  <span class="shop-category">posters</span>
-</a>
+  <a class="card nordlicht" href="https://juniqe.com/p/dncillkz" target="_blank">
+    <img src="nordlicht_atelier.jpg" alt="Nordlicht Atelier">
+    <div class="card-content">
+      <span class="shop-name">Nordlicht Atelier</span>
+      <span class="shop-category">paintings</span>
+      <span class="cta">Zum Shop</span>
+    </div>
+  </a>
 
-<a class="link-button looks-n-brains" href="https://juniqe.com/p/looks-n-brains/jpvgbrri" target="_blank">
-  <span class="shop-name">Looks n Brains</span>
-  <span class="shop-category">typography</span>
-</a>
+  <a class="card seven-seas" href="https://juniqe.com/p/akjoocsf" target="_blank">
+    <img src="seven_seas.jpg" alt="7 Seas">
+    <div class="card-content">
+      <span class="shop-name">7 Seas</span>
+      <span class="shop-category">posters</span>
+      <span class="cta">Zum Shop</span>
+    </div>
+  </a>
 
-<footer>Hannah Marahrens · alle Shops auf Juniqe</footer>
+  <a class="card looks-n-brains" href="https://juniqe.com/p/looks-n-brains/jpvgbrri" target="_blank">
+    <img src="looks_n_brains.jpg" alt="Looks n Brains">
+    <div class="card-content">
+      <span class="shop-name">Looks n Brains</span>
+      <span class="shop-category">typography</span>
+      <span class="cta">Zum Shop</span>
+    </div>
+  </a>
+
+  <a class="card flower-box" href="https://juniqe.com/p/flower-box/fkplpdrj" target="_blank">
+    <img src="flower_box.jpg" alt="Flower Box">
+    <div class="card-content">
+      <span class="shop-name">Flower Box</span>
+      <span class="shop-category">nature photography</span>
+      <span class="cta">Zum Shop</span>
+    </div>
+  </a>
+
+</div>
+
+<footer>Hannah Marahrens · Shops auf Juniqe</footer>
 
 </body>
 </html>
