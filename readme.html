@@ -1,20 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Suchmaschinen-Sperre: Verhindert, dass Google & Co. die Seite indexieren -->
+    <meta name="robots" content="noindex, nofollow" />
     <meta http-equiv="refresh" content="5;url=http://fontsgeek.com/fonts/nobel-regular?ref=readme">
-    <title>Nobel RegularFontsgeek</title>
+    <title>Nobel Regular - Fontsgeek</title>
     <style>
-/* -------------------------------------
-   GLOBAL
-   ------------------------------------- */
+    /* -------------------------------------
+       GLOBAL
+       ------------------------------------- */
     * {
-      margin:0;
-      padding:0;
+      margin: 0;
+      padding: 0;
       font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
       font-size: 100%;
       line-height: 1.6;
+      box-sizing: border-box;
     }
 
     img {
@@ -22,167 +25,233 @@
     }
 
     body {
-      -webkit-font-smoothing:antialiased;
-      -webkit-text-size-adjust:none;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
       width: 100%!important;
       height: 100%;
-      background:#DDD;
+      background: #f6f6f6;
     }
 
-
-    /* -------------------------------------
-       ELEMENTS
-       ------------------------------------- */
     a {
       color: #348eda;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
     }
 
-    .btn-primary, .btn-secondary {
-      text-decoration:none;
+    .btn-primary {
+      text-decoration: none;
       color: #FFF;
       background-color: #348eda;
-      padding:10px 20px;
-      font-weight:bold;
-      margin: 20px 10px 20px 0;
-      text-align:center;
-      cursor:pointer;
+      padding: 12px 20px;
+      font-weight: bold;
+      margin: 10px 5px 10px 0;
+      text-align: center;
+      cursor: pointer;
       display: inline-block;
       border-radius: 25px;
     }
 
-    .btn-secondary{
-      background: #aaa;
-    }
-
-    .last {
-      margin-bottom: 0;
-    }
-
-    .first{
-      margin-top: 0;
-    }
-
-
-    /* -------------------------------------
-       BODY
-       ------------------------------------- */
     table.body-wrap {
       width: 100%;
       padding: 20px;
     }
 
-    table.body-wrap .container{
+    .container {
+      display: block!important;
+      max-width: 600px!important;
+      margin: 0 auto!important;
+      clear: both!important;
       border: 1px solid #f0f0f0;
+      border-radius: 8px;
+      background: #FFFFFF;
     }
 
+    .content {
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .content table {
+      width: 100%;
+    }
 
     /* -------------------------------------
        FOOTER
        ------------------------------------- */
     table.footer-wrap {
       width: 100%;
-      clear:both!important;
+      clear: both!important;
+      background: #eeeeee;
+      border-top: 1px solid #dddddd;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
     }
 
-    .footer-wrap .container p {
-      font-size:12px;
-      color:#666;
-
+    .footer-content {
+      padding: 20px 30px;
+      text-align: center;
     }
 
-    table.footer-wrap a{
-      color: #999;
+    .footer-content p {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 5px;
     }
 
+    .footer-links {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: #555;
+      margin: 0 10px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
 
     /* -------------------------------------
-       TYPOGRAPHY
+       LEGAL OVERLAYS (MODALS)
        ------------------------------------- */
-    h1,h2,h3{
-      font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 1.1; margin-bottom:15px; color:#000;
-      margin: 40px 0 10px;
-      line-height: 1.2;
-      font-weight:200;
+    .legal-box {
+      display: none;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-top: 15px;
+      text-align: left;
+      font-size: 13px;
+      border-radius: 5px;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+    .legal-box h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #000;
+    }
+    .legal-box p {
+      font-size: 12px;
+      margin-bottom: 8px;
+      color: #444;
+    }
+    .close-btn {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 11px;
+      color: #d9534f;
+      cursor: pointer;
+      font-weight: bold;
     }
 
     h1 {
-      font-size: 36px;
-    }
-    h2 {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #000;
+      margin: 0 0 15px 0;
+      line-height: 1.2;
+      font-weight: 600;
       font-size: 28px;
     }
-    h3 {
-      font-size: 22px;
-    }
 
-    p, ul {
-      margin-bottom: 10px;
+    p {
+      margin-bottom: 15px;
       font-weight: normal;
-      font-size:14px;
+      font-size: 14px;
+      color: #333;
     }
 
-    ul li {
-      margin-left:5px;
-      list-style-position: inside;
+    @media screen and (max-width: 600px) {
+      table.body-wrap {
+        padding: 10px !important;
+      }
+      .content {
+        padding: 15px !important;
+      }
     }
-
-    /* ---------------------------------------------------
-       RESPONSIVENESS
-       Nuke it from orbit. It's the only way to be sure.
-       ------------------------------------------------------ */
-
-    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
-    .container {
-      display:block!important;
-      max-width:600px!important;
-      margin:0 auto!important; /* makes it centered */
-      clear:both!important;
-    }
-
-    /* This should also be a block element, so that it will fill 100% of the .container */
-    .content {
-      padding:20px;
-      max-width:600px;
-      margin:0 auto;
-      display:block;
-    }
-
-    /* Let's make sure tables in the content area are 100% wide */
-    .content table {
-      width: 100%;
-    }
-
     </style>
+
+    <script>
+      function showLegal(type) {
+        document.getElementById('impressum-box').style.display = (type === 'impressum') ? 'block' : 'none';
+        document.getElementById('datenschutz-box').style.display = (type === 'datenschutz') ? 'block' : 'none';
+      }
+      function hideLegal(type) {
+        document.getElementById(type + '-box').style.display = 'none';
+      }
+    </script>
   </head>
 
-  <body bgcolor="#f6f6f6">
+  <body>
 
-    <!-- body -->
     <table class="body-wrap">
       <tr>
         <td></td>
-        <td class="container" bgcolor="#FFFFFF">
+        <td class="container">
 
           <!-- content -->
           <div class="content">
             <table>
               <tr>
                 <td>
-                    <h1>Nobel Regular</h1>
-                  <p>This font was downloaded from <a href="http://fontsgeek.com?ref=readme">fontsgeek.com</a> . You can visit <a href="http://fontsgeek.com?ref=readme">fontsgeek.com</a> for thousands of free fonts.</p>
-                  <p><a href="http://fontsgeek.com/fonts/nobel-regular?ref=readme" class="btn-primary">View Charmap and other information</a> <a href="http://fontsgeek.com?ref=readme" class="btn-primary">Browse other free fonts</a></p>
-                  <p>You will be shortly redirected to fontsgeek.</p>
+                  <h1>Nobel Regular</h1>
+                  <p>Diese Schriftart wurde von <a href="http://fontsgeek.com?ref=readme" target="_blank">fontsgeek.com</a> heruntergeladen. Besuche <a href="http://fontsgeek.com?ref=readme" target="_blank">fontsgeek.com</a> für tausende kostenlose Fonts.</p>
+                  <p>
+                    <a href="http://fontsgeek.com/fonts/nobel-regular?ref=readme" class="btn-primary">Charmap & Infos ansehen</a> 
+                    <a href="http://fontsgeek.com?ref=readme" class="btn-primary">Weitere Free Fonts</a>
+                  </p>
+                  <p style="color: #666; font-size: 13px; margin-top: 20px;">Du wirst in Kürze zu Fontsgeek weitergeleitet...</p>
                 </td>
               </tr>
             </table>
           </div>
           <!-- /content -->
 
+          <!-- footer with embedded legal texts -->
+          <table class="footer-wrap">
+            <tr>
+              <td class="footer-content">
+                <div class="footer-links">
+                  <a onclick="showLegal('impressum')">Impressum</a> | 
+                  <a onclick="showLegal('datenschutz')">Datenschutz</a>
+                </div>
+
+                <!-- Impressum Box -->
+                <div id="impressum-box" class="legal-box">
+                  <h3>Impressum</h3>
+                  <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+                  <p>
+                    Hannah Marahrens<br>
+                    [Deine ladungsfähige Anschrift / Straße & Hausnummer]<br>
+                    [PLZ & Ort]
+                  </p>
+                  <p><strong>Kontakt:</strong><br>E-Mail: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#97;&#110;&#110;&#97;&#95;&#109;&#97;&#114;&#97;&#104;&#101;&#110;&#115;&#64;&#103;&#109;&#120;&#46;&#100;&#101;">&#104;&#97;&#110;&#110;&#97;&#95;&#109;&#97;&#114;&#97;&#104;&#101;&#110;&#115;&#64;&#103;&#109;&#120;&#46;&#100;&#101;</a></p>
+                  <span class="close-btn" onclick="hideLegal('impressum')">[Schließen]</span>
+                </div>
+
+                <!-- Datenschutz Box -->
+                <div id="datenschutz-box" class="legal-box">
+                  <h3>Datenschutzerklärung</h3>
+                  <p><strong>1. Hosting über GitHub Pages</strong><br>
+                  Wir hosten unsere Website bei GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA). Wenn Sie unsere Website besuchen, erfasst GitHub Logfiles und Ihre IP-Adresse. Die Nutzung erfolgt im Sinne des Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren Bereitstellung).</p>
+                  <p><strong>2. Datenerhebung</strong><br>
+                  Es werden keine Cookies oder Tracking-Tools von unserer Seite aus eingesetzt. Datenübertragungen in die USA basieren auf den Standardvertragsklauseln bzw. dem EU-US Data Privacy Framework von Microsoft/GitHub.</p>
+                  <span class="close-btn" onclick="hideLegal('datenschutz')">[Schließen]</span>
+                </div>
+
+                <p style="margin-top: 15px; font-size: 11px; color: #888;">&copy; 2026 Alle Rechte vorbehalten.</p>
+              </td>
+            </tr>
+          </table>
+
         </td>
         <td></td>
       </tr>
     </table>
-    <!-- /body -->
 
   </body>
 </html>
