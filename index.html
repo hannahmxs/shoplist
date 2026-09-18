@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Meine Shops</title>
 <style>
+  @font-face {
+    font-family: 'Nobel';
+    src: url('fonts/nobel-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'NobelBold';
+    src: url('fonts/nobel-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -22,6 +36,8 @@
     margin-bottom: 40px;
     font-size: 28px;
     color: #000;
+    font-family: 'NobelBold', "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
   }
   .grid {
     display: grid;
@@ -59,7 +75,8 @@
   }
   a.card .shop-name {
     display: block;
-    font-weight: bold;
+    font-family: 'NobelBold', "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
     font-size: 16px;
   }
   a.card .shop-category {
@@ -239,6 +256,7 @@
 
 <!-- ===================== FOOTER MIT IMPRESSUM & DATENSCHUTZ ===================== -->
 <footer class="site-footer">
+  <div class="brand">Hannah Marahrens · Shops auf Juniqe</div>
   <div class="legal-links">
     <button class="legal-btn" onclick="openModal('impressumModal')">Impressum</button>
     <button class="legal-btn" onclick="openModal('datenschutzModal')">Datenschutz</button>
@@ -262,7 +280,7 @@
     <p>Gemäß § 19 UStG wird keine Umsatzsteuer ausgewiesen (Kleinunternehmerregelung).</p>
 
     <p><strong>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</strong></p>
-    <p>Hannah Marahrens<br><span>(Anschrift folgt in Kürze)</span></p>
+    <p>Hannah Marahrens<br>(Anschrift folgt in Kürze)</span></p>
 
     <p><strong>Haftung für Inhalte</strong></p>
     <p>Als Diensteanbieterin bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Gemäß §§ 8 bis 10 DDG bin ich als Diensteanbieterin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen.</p>
@@ -275,6 +293,9 @@
 
     <p><strong>Verbraucherstreitbeilegung</strong></p>
     <p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+    <p><strong>Quellenangabe (Font)</strong></p>
+    <p style="font-size: 12px; color: #666;">Font made from <a href="https://www.onlinewebfonts.com" target="_blank" rel="noopener" style="text-decoration: underline; color: #000;">Online Web Fonts</a> is licensed by CC BY 4.0</p>
   </div>
 </div>
 
@@ -288,7 +309,7 @@
     <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
 
     <p><strong>2. Verantwortliche Stelle</strong></p>
-    <p>Hannah Marahrens<br>(Anschrift folgt in Kürze)</span><br>
+    <p>Hannah Marahrens<br><>(Anschrift folgt in Kürze)</span><br>
     E-Mail: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#97;&#110;&#110;&#97;&#104;&#95;&#109;&#97;&#114;&#97;&#104;&#114;&#101;&#110;&#115;&#64;&#103;&#109;&#120;&#46;&#100;&#101;">&#104;&#97;&#110;&#110;&#97;&#104;&#95;&#109;&#97;&#114;&#97;&#104;&#114;&#101;&#110;&#115;&#64;&#103;&#109;&#120;&#46;&#100;&#101;</a></p>
 
     <p><strong>3. Hosting</strong></p>
