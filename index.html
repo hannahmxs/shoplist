@@ -1,163 +1,257 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Meine Shops</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Nobel, sans-serif;
-    background: #fff;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 20px;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
-  h1 {
-    margin-bottom: 40px;
-    font-size: 28px;
-    color: #000;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
-    max-width: 900px;
-  }
-  a.card {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: #333;
-    overflow: hidden;
-    transition: 0.2s;
-  }
-  a.card:hover {
-    transform: translateY(-3px);
-  }
-  a.card .img-frame {
-    padding: 14px 14px 0;
-  }
-  a.card .img-frame img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-    display: block;
-    background: #fff;
-  }
-  a.card .card-content {
-    padding: 12px 16px 18px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
-  a.card .shop-name {
-    display: block;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  a.card .shop-category {
-    display: block;
-    font-weight: 300;
-    font-size: 13px;
-    margin-top: 2px;
-  }
-  a.card .cta {
-    font-size: 11px;
-    text-decoration: underline;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-top: auto;
-    padding-top: 10px;
-  }
-  .eyes-tries { background: #f6d6d6; }
-  .raw-rare   { background: #d7e3f4; }
-  .nordlicht  { background: #d4ecdd; }
-  .seven-seas { background: #fdeecb; }
-  .looks-n-brains { background: #e6d9f2; }
-  .flower-box { background: #fbe0ef; }
-  footer {
-    margin-top: 60px;
-    font-size: 12px;
-    color: #000;
-    font-weight: 300;
-  }
-
-  @media (max-width: 600px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Suchmaschinen-Sperre: Verhindert, dass Google & Co. die Seite indexieren -->
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="refresh" content="5;url=http://fontsgeek.com/fonts/nobel-regular?ref=readme">
+    <title>Nobel Regular - Fontsgeek</title>
+    <style>
+    /* -------------------------------------
+       GLOBAL
+       ------------------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-size: 100%;
+      line-height: 1.6;
+      box-sizing: border-box;
     }
-  }
-</style>
-</head>
-<body>
 
-<h1>Meine Shops</h1>
+    img {
+      max-width: 100%;
+    }
 
-<div class="grid">
+    body {
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none;
+      width: 100%!important;
+      height: 100%;
+      background: #f6f6f6;
+    }
 
-  <a class="card eyes-tries" href="https://juniqe.com/p/ytmwirhq" target="_blank">
-    <div class="img-frame"><img src="eyes_and_tries2.jpg" alt="Eyes & Tries"></div>
-    <div class="card-content">
-      <span class="shop-name">Eyes & Tries</span>
-      <span class="shop-category">photography</span>
-      <span class="cta">Zum Shop</span>
-    </div>
-  </a>
+    a {
+      color: #348eda;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
 
-  <a class="card raw-rare" href="https://juniqe.com/p/raw-and-rare/cprvkxlm" target="_blank">
-    <div class="img-frame"><img src="raw_and_rare2.jpg" alt="Raw & Rare"></div>
-    <div class="card-content">
-      <span class="shop-name">Raw & Rare</span>
-      <span class="shop-category">s/w photography</span>
-      <span class="cta">Zum Shop</span>
-    </div>
-  </a>
+    .btn-primary {
+      text-decoration: none;
+      color: #FFF;
+      background-color: #348eda;
+      padding: 12px 20px;
+      font-weight: bold;
+      margin: 10px 5px 10px 0;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+      border-radius: 25px;
+    }
 
-  <a class="card nordlicht" href="https://juniqe.com/p/dncillkz" target="_blank">
-    <div class="img-frame"><img src="nordlicht_atelier2.jpg" alt="Nordlicht Atelier"></div>
-    <div class="card-content">
-      <span class="shop-name">Nordlicht Atelier</span>
-      <span class="shop-category">paintings</span>
-      <span class="cta">Zum Shop</span>
-    </div>
-  </a>
+    table.body-wrap {
+      width: 100%;
+      padding: 20px;
+    }
 
-  <a class="card seven-seas" href="https://juniqe.com/p/akjoocsf" target="_blank">
-    <div class="img-frame"><img src="seven_seas2.jpg" alt="7 Seas"></div>
-    <div class="card-content">
-      <span class="shop-name">7 Seas</span>
-      <span class="shop-category">posters</span>
-      <span class="cta">Zum Shop</span>
-    </div>
-  </a>
+    .container {
+      display: block!important;
+      max-width: 600px!important;
+      margin: 0 auto!important;
+      clear: both!important;
+      border: 1px solid #f0f0f0;
+      border-radius: 8px;
+      background: #FFFFFF;
+    }
 
-  <a class="card looks-n-brains" href="https://juniqe.com/p/looks-n-brains/jpvgbrri" target="_blank">
-    <div class="img-frame"><img src="looks_n_brains2.jpg" alt="Looks n Brains"></div>
-    <div class="card-content">
-      <span class="shop-name">Looks n Brains</span>
-      <span class="shop-category">typography</span>
-      <span class="cta">Zum Shop</span>
-    </div>
-  </a>
+    .content {
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      display: block;
+    }
 
-  <a class="card flower-box" href="https://juniqe.com/p/flower-box/fkplpdrj" target="_blank">
-    <div class="img-frame"><img src="flower_box2.jpg" alt="Flower Box"></div>
-    <div class="card-content">
-      <span class="shop-name">Flower Box</span>
-      <span class="shop-category">nature photography</span>
-      <span class="cta">Zum Shop</span>
-    </div>
-  </a>
+    .content table {
+      width: 100%;
+    }
 
-</div>
+    /* -------------------------------------
+       FOOTER
+       ------------------------------------- */
+    table.footer-wrap {
+      width: 100%;
+      clear: both!important;
+      background: #eeeeee;
+      border-top: 1px solid #dddddd;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
 
-<footer>Hannah Marahrens · Shops auf Juniqe</footer>
+    .footer-content {
+      padding: 20px 30px;
+      text-align: center;
+    }
 
-</body>
+    .footer-content p {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .footer-links {
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .footer-links a {
+      color: #555;
+      margin: 0 10px;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    /* -------------------------------------
+       LEGAL OVERLAYS (MODALS)
+       ------------------------------------- */
+    .legal-box {
+      display: none;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-top: 15px;
+      text-align: left;
+      font-size: 13px;
+      border-radius: 5px;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+    .legal-box h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #000;
+    }
+    .legal-box p {
+      font-size: 12px;
+      margin-bottom: 8px;
+      color: #444;
+    }
+    .close-btn {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 11px;
+      color: #d9534f;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #000;
+      margin: 0 0 15px 0;
+      line-height: 1.2;
+      font-weight: 600;
+      font-size: 28px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-weight: normal;
+      font-size: 14px;
+      color: #333;
+    }
+
+    @media screen and (max-width: 600px) {
+      table.body-wrap {
+        padding: 10px !important;
+      }
+      .content {
+        padding: 15px !important;
+      }
+    }
+    </style>
+
+    <script>
+      function showLegal(type) {
+        document.getElementById('impressum-box').style.display = (type === 'impressum') ? 'block' : 'none';
+        document.getElementById('datenschutz-box').style.display = (type === 'datenschutz') ? 'block' : 'none';
+      }
+      function hideLegal(type) {
+        document.getElementById(type + '-box').style.display = 'none';
+      }
+    </script>
+  </head>
+
+  <body>
+
+    <table class="body-wrap">
+      <tr>
+        <td></td>
+        <td class="container">
+
+          <!-- content -->
+          <div class="content">
+            <table>
+              <tr>
+                <td>
+                  <h1>Nobel Regular</h1>
+                  <p>Diese Schriftart wurde von <a href="http://fontsgeek.com?ref=readme" target="_blank">fontsgeek.com</a> heruntergeladen. Besuche <a href="http://fontsgeek.com?ref=readme" target="_blank">fontsgeek.com</a> für tausende kostenlose Fonts.</p>
+                  <p>
+                    <a href="http://fontsgeek.com/fonts/nobel-regular?ref=readme" class="btn-primary">Charmap & Infos ansehen</a> 
+                    <a href="http://fontsgeek.com?ref=readme" class="btn-primary">Weitere Free Fonts</a>
+                  </p>
+                  <p style="color: #666; font-size: 13px; margin-top: 20px;">Du wirst in Kürze zu Fontsgeek weitergeleitet...</p>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <!-- /content -->
+
+          <!-- footer with embedded legal texts -->
+          <table class="footer-wrap">
+            <tr>
+              <td class="footer-content">
+                <div class="footer-links">
+                  <a onclick="showLegal('impressum')">Impressum</a> | 
+                  <a onclick="showLegal('datenschutz')">Datenschutz</a>
+                </div>
+
+                <!-- Impressum Box -->
+                <div id="impressum-box" class="legal-box">
+                  <h3>Impressum</h3>
+                  <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+                  <p>
+                    Hannah Marahrens<br>
+                    [Deine ladungsfähige Anschrift / Straße & Hausnummer]<br>
+                    [PLZ & Ort]
+                  </p>
+                  <p><strong>Kontakt:</strong><br>E-Mail: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#104;&#97;&#110;&#110;&#97;&#95;&#109;&#97;&#114;&#97;&#104;&#101;&#110;&#115;&#64;&#103;&#109;&#120;&#46;&#100;&#101;">&#104;&#97;&#110;&#110;&#97;&#95;&#109;&#97;&#114;&#97;&#104;&#101;&#110;&#115;&#64;&#103;&#109;&#120;&#46;&#100;&#101;</a></p>
+                  <span class="close-btn" onclick="hideLegal('impressum')">[Schließen]</span>
+                </div>
+
+                <!-- Datenschutz Box -->
+                <div id="datenschutz-box" class="legal-box">
+                  <h3>Datenschutzerklärung</h3>
+                  <p><strong>1. Hosting über GitHub Pages</strong><br>
+                  Wir hosten unsere Website bei GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA). Wenn Sie unsere Website besuchen, erfasst GitHub Logfiles und Ihre IP-Adresse. Die Nutzung erfolgt im Sinne des Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer sicheren Bereitstellung).</p>
+                  <p><strong>2. Datenerhebung</strong><br>
+                  Es werden keine Cookies oder Tracking-Tools von unserer Seite aus eingesetzt. Datenübertragungen in die USA basieren auf den Standardvertragsklauseln bzw. dem EU-US Data Privacy Framework von Microsoft/GitHub.</p>
+                  <span class="close-btn" onclick="hideLegal('datenschutz')">[Schließen]</span>
+                </div>
+
+                <p style="margin-top: 15px; font-size: 11px; color: #888;">&copy; 2026 Alle Rechte vorbehalten.</p>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+        <td></td>
+      </tr>
+    </table>
+
+  </body>
 </html>
